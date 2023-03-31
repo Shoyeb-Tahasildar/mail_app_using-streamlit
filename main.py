@@ -7,8 +7,8 @@ import streamlit as st
 import mysql.connector as con
 smtp_port  = 587
 smtp_server = "smtp.gmail.com"
-email_from = "shoyebtahasildar@gmail.com"
-pwd  = "zudroomlgoryxhtn" #get the password authentication string form google dash board
+email_from = "" #sender mail
+pwd  = "" #get the password authentication string form google dash board
 simple_email_context = ssl.create_default_context()
 
 
@@ -16,10 +16,10 @@ simple_email_context = ssl.create_default_context()
 # databse connectivity
 try:
     db = con.connect(
-        host="localhost",
-        user="root",
-        password = "8484058735",
-        database = "mailData"
+        host="localhost", #ip of 
+        user="root", #user name
+        password = "", #db password
+        database = "" #databse name
     )
     print(db.get_server_info())
     curser = db.cursor()
@@ -28,7 +28,7 @@ except:
 
 #function to save the data to the database
 def saveData(send_emai_to,message):
-    email_from = "shoyebtahasildar@gmail.com"
+    email_from = "" # sender email
     # send_emai_to = send_emai_to
     # message = message
     print(message)
