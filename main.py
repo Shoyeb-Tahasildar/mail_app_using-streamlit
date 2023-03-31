@@ -42,17 +42,7 @@ def saveData(send_emai_to,message):
         db.close()
     except:
         print("query not executed")
-
-
-# logic
-# st.title('Simple email send web app: ')
-# st.title('Please enter a :blue[email] to send :')
-# send_emai_to = st.text_input("Reciver Email: ")
-# message = st.text_input("Enter Content to send: ")
-# print(send_emai_to)
-
-
-
+#mail send function
 def sendmail(send_emai_to,message):
     try:
         print("connecting to server ...")
@@ -75,9 +65,6 @@ with st.form("my_form"):
    st.title('Please enter a :blue[email] to send :')
    send_emai_to = st.text_input("Reciver Email: ")
    message = st.text_input("Enter Content to send: ")
-    # print(send_emai_to+" "+message)
-
-   # Every form must have a submit button.
    submitted = st.form_submit_button("Submit")
    if submitted:
        try:
